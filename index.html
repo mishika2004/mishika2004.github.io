@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mishika Mendiratta | Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Mishika Mendiratta, Computer Science undergraduate & Full-Stack Developer specializing in MERN stack, real-time web applications, and scalable architecture.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏝️</text></svg>">
+
+  <!-- Google Fonts: Fraunces (warm storybook serif) & Plus Jakarta Sans (clean tech UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== BACKGROUND SCROLLYTELLING STAGE ==================== -->
+  <div id="scroll-stage" aria-hidden="true">
+    
+    <!-- Canvas for Image Sequence ("Multiple photos arranged") -->
+    <canvas id="scroll-canvas"></canvas>
+
+    <!-- Video tag for background MP4/WebM scrubbing -->
+    <video id="scroll-video" muted playsinline></video>
+
+    <!-- Vector Illustrated Scenic Background (Matches Seán Halpin aesthetic) -->
+    <div id="vector-stage" class="vector-scene">
+      <div class="scene-sky"></div>
+
+      <!-- Twinkling Sparkles / Stars -->
+      <div class="sparkle-group">
+        <div class="sparkle" style="top: 15%; left: 24%; animation-delay: 0.2s;">
+          <svg viewBox="0 0 24 24"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5z"/></svg>
+        </div>
+        <div class="sparkle" style="top: 22%; right: 28%; animation-delay: 1.5s;">
+          <svg viewBox="0 0 24 24"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5z"/></svg>
+        </div>
+        <div class="sparkle" style="top: 38%; right: 8%; animation-delay: 2.1s;">
+          <svg viewBox="0 0 24 24"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5z"/></svg>
+        </div>
+      </div>
+
+      <!-- Cute Smiling Clouds (Continuous Drifting Motion) -->
+      <div class="clouds-container">
+        <!-- Cloud 1 -->
+        <div class="cloud-drift cloud-drift-1">
+          <div class="cloud-item cloud-1">
+            <svg viewBox="0 0 160 90" width="100%" height="100%">
+              <path d="M35 70 Q15 70 15 50 Q15 32 32 30 Q38 10 65 10 Q90 10 98 25 Q115 15 132 30 Q148 35 148 52 Q148 70 128 70 Z" fill="#ffffff" />
+              <circle cx="68" cy="46" r="3" fill="#1b3b30" />
+              <circle cx="92" cy="46" r="3" fill="#1b3b30" />
+              <circle cx="61" cy="51" r="5" fill="#fbaab5" opacity="0.8" />
+              <circle cx="99" cy="51" r="5" fill="#fbaab5" opacity="0.8" />
+              <path d="M76 52 Q80 57 84 52" stroke="#1b3b30" stroke-width="2.5" fill="none" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Cloud 2 -->
+        <div class="cloud-drift cloud-drift-2">
+          <div class="cloud-item cloud-2">
+            <svg viewBox="0 0 180 95" width="100%" height="100%">
+              <path d="M40 75 Q18 75 18 55 Q18 35 38 32 Q45 10 75 10 Q105 10 114 26 Q132 15 150 32 Q168 38 168 58 Q168 75 145 75 Z" fill="#ffffff" />
+              <circle cx="82" cy="48" r="3.2" fill="#1b3b30" />
+              <circle cx="106" cy="48" r="3.2" fill="#1b3b30" />
+              <circle cx="74" cy="53" r="5" fill="#fbaab5" opacity="0.8" />
+              <circle cx="114" cy="53" r="5" fill="#fbaab5" opacity="0.8" />
+              <path d="M90 53 Q94 59 98 53" stroke="#1b3b30" stroke-width="2.5" fill="none" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Cloud 3 -->
+        <div class="cloud-drift cloud-drift-3">
+          <div class="cloud-item cloud-3">
+            <svg viewBox="0 0 150 85" width="100%" height="100%">
+              <path d="M30 68 Q12 68 12 50 Q12 32 30 30 Q36 12 60 12 Q82 12 90 25 Q106 16 122 30 Q138 36 138 52 Q138 68 120 68 Z" fill="#ffffff" />
+              <circle cx="65" cy="45" r="2.8" fill="#1b3b30" />
+              <circle cx="85" cy="45" r="2.8" fill="#1b3b30" />
+              <circle cx="58" cy="49" r="4.5" fill="#fbaab5" opacity="0.8" />
+              <circle cx="92" cy="49" r="4.5" fill="#fbaab5" opacity="0.8" />
+              <path d="M72 49 Q75 54 78 49" stroke="#1b3b30" stroke-width="2.2" fill="none" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Cloud 4 -->
+        <div class="cloud-drift cloud-drift-4">
+          <div class="cloud-item cloud-4">
+            <svg viewBox="0 0 140 80" width="100%" height="100%">
+              <path d="M28 65 Q10 65 10 48 Q10 32 28 30 Q34 12 58 12 Q80 12 88 24 Q102 16 116 30 Q130 36 130 50 Q130 65 112 65 Z" fill="#ffffff" />
+              <circle cx="60" cy="42" r="2.6" fill="#1b3b30" />
+              <circle cx="80" cy="42" r="2.6" fill="#1b3b30" />
+              <circle cx="54" cy="46" r="4" fill="#fbaab5" opacity="0.8" />
+              <circle cx="86" cy="46" r="4" fill="#fbaab5" opacity="0.8" />
+              <path d="M67 46 Q70 51 73 46" stroke="#1b3b30" stroke-width="2" fill="none" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Illustrated Coastal Panorama Landscape (SVG with Hills, Village, Lighthouse, Water) -->
+      <svg class="landscape-svg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <!-- Lighthouse Beam Pendulum Gradient (pointing towards bottom water) -->
+          <linearGradient id="beam-pendulum-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#fffde7" stop-opacity="0.95" />
+            <stop offset="30%" stop-color="#fff59d" stop-opacity="0.6" />
+            <stop offset="70%" stop-color="#ffe082" stop-opacity="0.25" />
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+          </linearGradient>
+
+          <!-- Water Gradient -->
+          <linearGradient id="water-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#8fd6df" />
+            <stop offset="35%" stop-color="#72c4d1" />
+            <stop offset="100%" stop-color="#4a9ca9" />
+          </linearGradient>
+        </defs>
+
+        <!-- Background Hills (Soft Mint) -->
+        <g class="layer-hills-bg">
+          <path d="M-80 340 Q150 160 480 300 T1100 280 Q1280 220 1520 320 L1520 600 L-80 600 Z" fill="#a4dabf" opacity="0.55" />
+          <!-- Cloud silhouettes behind hills -->
+          <circle cx="340" cy="280" r="90" fill="#ffffff" opacity="0.4" />
+          <circle cx="430" cy="290" r="70" fill="#ffffff" opacity="0.4" />
+          <circle cx="1140" cy="270" r="100" fill="#ffffff" opacity="0.4" />
+          <circle cx="1220" cy="280" r="80" fill="#ffffff" opacity="0.4" />
+        </g>
+
+        <!-- Left Big Green Hill -->
+        <g class="layer-hills-fg">
+          <path d="M-60 600 L-60 270 Q140 230 320 370 Q440 460 620 450 Q560 520 460 600 Z" fill="#90d1b3" />
+        </g>
+
+        <!-- Right Promontory Hill (Under Lighthouse) -->
+        <g>
+          <path d="M880 460 Q980 380 1140 370 Q1300 360 1520 430 L1520 600 L860 600 Z" fill="#88cba9" />
+        </g>
+
+        <!-- Sandy Shoreline / Beach -->
+        <g>
+          <path d="M120 600 Q260 480 480 470 Q620 470 760 520 Q810 540 850 600 Z" fill="#f7d9b5" />
+        </g>
+
+        <!-- Ocean Water Body -->
+        <g>
+          <path d="M520 600 Q650 515 820 495 Q1150 495 1520 500 L1520 600 Z" fill="url(#water-grad)" />
+          
+          <!-- Wave ripple foam lines -->
+          <path class="wave-ripple" d="M530 590 Q650 510 820 493 Q980 492 1150 498" stroke="#ffffff" stroke-width="4.5" fill="none" opacity="0.9" stroke-linecap="round" />
+          <path class="wave-ripple" d="M600 598 Q720 535 880 520 Q1060 520 1280 525" stroke="#b6ecf2" stroke-width="3" fill="none" opacity="0.75" />
+          <path class="wave-ripple" d="M1040 550 Q1090 545 1140 550 Q1190 555 1240 550" stroke="#ffffff" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.85" />
+          <path class="wave-ripple" d="M960 580 Q1010 575 1060 580 Q1110 585 1160 580" stroke="#ffffff" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.85" />
+        </g>
+
+        <!-- Pine Trees on Left Hill -->
+        <g class="pine-trees-left">
+          <!-- Tree 1: Terracotta -->
+          <g transform="translate(45, 420)">
+            <rect x="18" y="60" width="8" height="24" fill="#6d4c41" rx="2" />
+            <polygon points="22,10 0,65 44,65" fill="#e76550" />
+            <polygon points="22,0 4,45 40,45" fill="#e76550" />
+          </g>
+          <!-- Tree 2: Deep Teal -->
+          <g transform="translate(100, 445)">
+            <rect x="18" y="55" width="8" height="20" fill="#6d4c41" rx="2" />
+            <polygon points="22,10 2,60 42,60" fill="#357764" />
+            <polygon points="22,0 6,40 38,40" fill="#357764" />
+          </g>
+          <!-- Tree 3: Mustard Yellow -->
+          <g transform="translate(145, 430)">
+            <rect x="16" y="55" width="7" height="20" fill="#6d4c41" rx="2" />
+            <polygon points="20,10 3,58 37,58" fill="#f2c057" />
+            <polygon points="20,0 6,38 34,38" fill="#f2c057" />
+          </g>
+          <!-- Tree 4: Pinkish Peach -->
+          <g transform="translate(80, 400)">
+            <rect x="12" y="45" width="6" height="18" fill="#6d4c41" rx="2" />
+            <polygon points="15,8 2,48 28,48" fill="#f48e7d" />
+            <polygon points="15,0 4,32 26,32" fill="#f48e7d" />
+          </g>
+          <!-- Tree 5: Coral on peak -->
+          <g transform="translate(205, 320)">
+            <rect x="14" y="45" width="6" height="18" fill="#6d4c41" rx="2" />
+            <polygon points="17,6 2,48 32,48" fill="#e76550" />
+            <polygon points="17,0 5,30 29,30" fill="#e76550" />
+          </g>
+        </g>
+
+        <!-- Quaint Coastal Cottages on the Beach -->
+        <g class="village-houses">
+          <!-- House 1: Slate Blue -->
+          <g transform="translate(315, 465)">
+            <rect x="8" y="18" width="48" height="42" fill="#7593a4" rx="2" />
+            <polygon points="32,0 2,20 62,20" fill="#546e7a" />
+            <rect x="42" y="4" width="8" height="14" fill="#37474f" />
+            <rect x="16" y="26" width="12" height="14" fill="#ffecb3" />
+            <rect x="36" y="26" width="12" height="14" fill="#ffecb3" />
+            <rect x="26" y="44" width="12" height="16" fill="#37474f" />
+          </g>
+          <!-- House 2: Mauve Pink -->
+          <g transform="translate(410, 485)">
+            <rect x="8" y="16" width="46" height="40" fill="#d9899a" rx="2" />
+            <polygon points="31,0 2,18 60,18" fill="#b06375" />
+            <rect x="16" y="24" width="10" height="12" fill="#ffecb3" />
+            <rect x="38" y="24" width="10" height="12" fill="#ffecb3" />
+            <rect x="26" y="40" width="12" height="16" fill="#4a2530" />
+          </g>
+          <!-- House 3: Warm Wood Brown -->
+          <g transform="translate(425, 430)">
+            <rect x="8" y="20" width="56" height="44" fill="#a46d49" rx="2" />
+            <polygon points="36,0 2,22 70,22" fill="#7d4e2f" />
+            <rect x="50" y="4" width="8" height="15" fill="#4e2c16" />
+            <rect x="18" y="28" width="14" height="14" fill="#ffecb3" />
+            <rect x="40" y="28" width="14" height="14" fill="#ffecb3" />
+          </g>
+          <!-- House 4: Clay Orange -->
+          <g transform="translate(485, 465)">
+            <rect x="6" y="18" width="50" height="42" fill="#bf7453" rx="2" />
+            <polygon points="31,0 0,20 62,20" fill="#914d31" />
+            <rect x="16" y="26" width="12" height="14" fill="#ffecb3" />
+            <rect x="36" y="26" width="12" height="14" fill="#ffecb3" />
+            <rect x="25" y="44" width="12" height="16" fill="#442113" />
+          </g>
+        </g>
+
+        <!-- Pine Trees on Right Hill -->
+        <g class="pine-trees-right">
+          <g transform="translate(1080, 360)">
+            <polygon points="16,6 2,46 30,46" fill="#357764" />
+            <polygon points="16,0 4,30 28,30" fill="#357764" />
+          </g>
+          <g transform="translate(1120, 375)">
+            <polygon points="14,6 2,40 26,40" fill="#f2c057" />
+            <polygon points="14,0 4,26 24,26" fill="#f2c057" />
+          </g>
+          <g transform="translate(1150, 365)">
+            <polygon points="15,6 2,44 28,44" fill="#e76550" />
+            <polygon points="15,0 4,28 26,28" fill="#e76550" />
+          </g>
+          <g transform="translate(1260, 340)">
+            <polygon points="16,6 2,48 30,48" fill="#357764" />
+            <polygon points="16,0 4,30 28,30" fill="#357764" />
+          </g>
+        </g>
+
+        <!-- THE ICONIC LIGHTHOUSE -->
+        <g class="lighthouse-group" transform="translate(980, 310)">
+          <!-- Lighthouse Light Beam swinging like a pendulum at the bottom -->
+          <g class="lighthouse-beam-pendulum">
+            <polygon class="lighthouse-beam" points="40,28 -110,265 60,270" fill="url(#beam-pendulum-grad)" />
+            <!-- Soft warm light glow reflection on the water at the bottom -->
+            <ellipse cx="-25" cy="265" rx="65" ry="9" fill="#fff9c4" opacity="0.6" />
+          </g>
+
+          <!-- Lighthouse Base Foundation -->
+          <rect x="14" y="160" width="52" height="16" fill="#8d99ae" rx="3" />
+
+          <!-- Main Tower Body (Banded Red & Cream Stripes) -->
+          <polygon points="20,160 26,40 54,40 60,160" fill="#ffffff" />
+          <!-- Red Stripe 1 (Bottom) -->
+          <polygon points="21,142 23,115 57,115 59,142" fill="#e76550" />
+          <!-- Red Stripe 2 (Top) -->
+          <polygon points="24,90 25,65 55,65 56,90" fill="#e76550" />
+
+          <!-- Observation Gallery / Railing -->
+          <rect x="18" y="36" width="44" height="6" fill="#455a64" rx="2" />
+          <line x1="20" y1="36" x2="60" y2="36" stroke="#ffffff" stroke-width="2" />
+
+          <!-- Lantern Glass Room -->
+          <rect x="24" y="18" width="32" height="20" fill="#fff9c4" rx="2" stroke="#455a64" stroke-width="2" />
+          <circle cx="40" cy="28" r="7" fill="#ffe082" />
+          <circle cx="40" cy="28" r="4" fill="#ffffff" />
+
+          <!-- Lantern Cap / Dome Roof -->
+          <path d="M22 18 Q40 0 58 18 Z" fill="#e76550" />
+          <circle cx="40" cy="4" r="3" fill="#e76550" />
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN NAVIGATION ==================== -->
+  <header class="main-nav">
+    <a href="#home" class="brand-logo">
+      <span>Mishika</span>
+      <span class="brand-dot">✦</span>
+    </a>
+
+    <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Work</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#journey" class="nav-link">Journey</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="assets/mishi-res-2.pdf" download="Mishika_Mendiratta_Resume.pdf" class="nav-btn-resume">
+            Resume <span>↓</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ==================== CONTENT WRAPPER ==================== -->
+  <main class="content-wrapper">
+
+    <!-- 1. HERO SECTION (Matches Seán Halpin aesthetic) -->
+    <section id="home" class="hero-section">
+      <div class="hero-pill-status">
+        <span class="pulse-indicator"></span>
+        <span>Open to Opportunities & Internships</span>
+      </div>
+
+      <h1 class="hero-title">
+        Hi. I'm Mishika.<br>
+        <span class="hero-surname">Mendiratta.</span><br>
+        <span class="hero-role-small">A Full-Stack Developer.</span>
+      </h1>
+
+      <p class="hero-bio">
+        I'm passionate about crafting web experiences that are engaging, scalable, and user-centric with modern MERN architecture.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+          Explore My Work <span>↓</span>
+        </a>
+        <a href="#contact" class="btn-secondary">
+          Say Hello <span>✉</span>
+        </a>
+      </div>
+
+      <div class="scroll-indicator-arrow">
+        <span>Scroll to explore the island</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT SECTION ("The Cabin & Lore") -->
+    <section id="about" class="section-container">
+      <span class="section-tagline">✦ Story &amp; Philosophy</span>
+      <h2 class="section-title">Building with curiosity,<br>architecting with care.</h2>
+      
+      <div class="about-card">
+        <div class="about-text">
+          <h3>Computer Science Undergraduate &amp; Full-Stack Builder</h3>
+          <p>
+            Based in Greater Noida, India, I build dynamic web applications from the ground up. Whether it's architecting real-time WebSockets communication, designing intuitive shopping checkout workflows, or optimizing MongoDB aggregation pipelines, I prioritize clean code, responsiveness, and performance.
+          </p>
+          <p>
+            Currently pursuing my B.Tech in Computer Science &amp; Engineering at Galgotias University with a strong foundation in scalable web architecture and modern software engineering.
+          </p>
+
+          <div class="stat-pills">
+            <div class="stat-pill">
+              <div class="stat-num">3+</div>
+              <div class="stat-label">Full-Stack Projects Shipped</div>
+            </div>
+            <div class="stat-pill">
+              <div class="stat-num">B.Tech</div>
+              <div class="stat-label">Computer Science &amp; Eng.</div>
+            </div>
+            <div class="stat-pill">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">MERN Stack Dedicated</div>
+            </div>
+            <div class="stat-pill">
+              <div class="stat-num">Remote</div>
+              <div class="stat-label">&amp; On-Site Ready</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual">
+          <!-- Cute Cottage Illustration -->
+          <div class="avatar-cottage">
+            <svg viewBox="0 0 100 100" width="100%" height="100%">
+              <circle cx="50" cy="50" r="48" fill="#e3f4ec" />
+              <!-- Cozy Cabin -->
+              <rect x="28" y="44" width="44" height="38" fill="#bf7453" rx="3" />
+              <polygon points="50,22 22,46 78,46" fill="#914d31" />
+              <rect x="60" y="24" width="8" height="16" fill="#546e7a" />
+              <!-- Windows with warm glow -->
+              <rect x="36" y="52" width="10" height="12" fill="#fff59d" rx="1" />
+              <rect x="54" y="52" width="10" height="12" fill="#fff59d" rx="1" />
+              <rect x="44" y="66" width="12" height="16" fill="#3e2723" rx="1" />
+            </svg>
+          </div>
+          <div class="avatar-badge">Mishika Mendiratta</div>
+          <div class="avatar-sub">Greater Noida, India 🇮🇳</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FEATURED PROJECTS SECTION ("The Harbor Workshop") -->
+    <section id="projects" class="section-container">
+      <span class="section-tagline">✦ Curated Work</span>
+      <h2 class="section-title">Handcrafted web apps,<br>tested in production.</h2>
+      <p class="section-desc">
+        A selection of real-world full-stack web applications featuring secure authentication, real-time messaging, and high-performance databases.
+      </p>
+
+      <div class="projects-grid">
+        
+        <!-- PROJECT 1: Urban Cart -->
+        <article class="project-card">
+          <div class="project-preview">
+            <img src="assets/images/project-urban-cart.svg" alt="Urban Cart E-Commerce Interface" class="project-img" loading="lazy">
+          </div>
+          <div class="project-info">
+            <span class="project-category">Full-Stack Web App</span>
+            <h3 class="project-title">Urban Cart</h3>
+            <p class="project-description">
+              A comprehensive e-commerce platform allowing customers to discover fresh groceries and organic products with dynamic category filtering, smooth cart state management, and real-time order processing.
+            </p>
+            <div class="project-tags">
+              <span class="tag-badge">React</span>
+              <span class="tag-badge">Node.js</span>
+              <span class="tag-badge">Express.js</span>
+              <span class="tag-badge">MongoDB</span>
+              <span class="tag-badge">REST API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://urban-cart-niv9.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-card-link btn-card-primary">
+                Live Demo <span>↗</span>
+              </a>
+              <a href="https://github.com/mishika2004" target="_blank" rel="noopener noreferrer" class="btn-card-link btn-card-ghost">
+                Source Code <span>⌥</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 2: Real-Time Chat App -->
+        <article class="project-card">
+          <div class="project-preview">
+            <img src="assets/images/project-chat-app.svg" alt="ConvoSphere Real-Time Chat Application" class="project-img" loading="lazy">
+          </div>
+          <div class="project-info">
+            <span class="project-category">WebSockets &amp; Security</span>
+            <h3 class="project-title">ConvoSphere Messenger</h3>
+            <p class="project-description">
+              A secure real-time messaging platform enabling seamless peer communication between authenticated users with persistent login sessions, user search, live online indicators, and instant message delivery.
+            </p>
+            <div class="project-tags">
+              <span class="tag-badge">React</span>
+              <span class="tag-badge">Socket.IO</span>
+              <span class="tag-badge">Node.js</span>
+              <span class="tag-badge">JWT Auth</span>
+              <span class="tag-badge">MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="https://convosphere-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-card-link btn-card-primary">
+                Live Demo <span>↗</span>
+              </a>
+              <a href="https://github.com/mishika2004" target="_blank" rel="noopener noreferrer" class="btn-card-link btn-card-ghost">
+                Source Code <span>⌥</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 3: SyncSales CRM -->
+        <article class="project-card">
+          <div class="project-preview">
+            <img src="assets/images/project-syncsales-crm.svg" alt="SyncSales CRM Dashboard" class="project-img" loading="lazy">
+          </div>
+          <div class="project-info">
+            <span class="project-category">CRM &amp; Workflow Systems</span>
+            <h3 class="project-title">SyncSales CRM</h3>
+            <p class="project-description">
+              A robust lead management CRM designed to streamline sales workflows and client pipelines. Features lead status toggling, agent assignment, team comments timeline, and actionable dashboard analytics.
+            </p>
+            <div class="project-tags">
+              <span class="tag-badge">React</span>
+              <span class="tag-badge">Express.js</span>
+              <span class="tag-badge">MongoDB</span>
+              <span class="tag-badge">Tailwind CSS</span>
+              <span class="tag-badge">Role Management</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/mishika2004" target="_blank" rel="noopener noreferrer" class="btn-card-link btn-card-primary">
+                View on GitHub <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 4. TECH STACK SECTION ("The Craft Grove") -->
+    <section id="skills" class="section-container">
+      <span class="section-tagline">✦ Technical Capabilities</span>
+      <h2 class="section-title">The tools I use to bring<br>ideas into reality.</h2>
+
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon-bubble">🎨</div>
+            <h3 class="skill-title">Frontend</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip">React.js</span>
+            <span class="skill-chip">JavaScript (ES6+)</span>
+            <span class="skill-chip">HTML5 &amp; CSS3</span>
+            <span class="skill-chip">Tailwind CSS</span>
+            <span class="skill-chip">Bootstrap</span>
+            <span class="skill-chip">Responsive Design</span>
+            <span class="skill-chip">React Hooks</span>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon-bubble">⚙️</div>
+            <h3 class="skill-title">Backend</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip">Node.js</span>
+            <span class="skill-chip">Express.js</span>
+            <span class="skill-chip">REST APIs</span>
+            <span class="skill-chip">Socket.IO</span>
+            <span class="skill-chip">WebSockets</span>
+            <span class="skill-chip">JWT Auth</span>
+            <span class="skill-chip">CRUD Architecture</span>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon-bubble">🗄️</div>
+            <h3 class="skill-title">Databases</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip">MongoDB</span>
+            <span class="skill-chip">Mongoose ODM</span>
+            <span class="skill-chip">MySQL</span>
+            <span class="skill-chip">MongoDB Atlas</span>
+            <span class="skill-chip">Schema Design</span>
+            <span class="skill-chip">Data Modeling</span>
+          </div>
+        </div>
+
+        <!-- Tools & Core CS -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon-bubble">🛠️</div>
+            <h3 class="skill-title">Tools &amp; Core CS</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-chip">Git &amp; GitHub</span>
+            <span class="skill-chip">Postman</span>
+            <span class="skill-chip">VS Code</span>
+            <span class="skill-chip">Vercel &amp; Render</span>
+            <span class="skill-chip">Data Structures</span>
+            <span class="skill-chip">OOPs</span>
+            <span class="skill-chip">DBMS &amp; OS</span>
+            <span class="skill-chip">C++</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. JOURNEY & EXPERIENCE ("The Coastal Trail") -->
+    <section id="journey" class="section-container">
+      <span class="section-tagline">✦ Experience &amp; Milestones</span>
+      <h2 class="section-title">My Journey so far.</h2>
+
+      <div class="timeline-card">
+        <div class="timeline-stream">
+          
+          <!-- Experience 1 -->
+          <div class="timeline-node">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">July 2025 — August 2025</div>
+            <h3 class="timeline-role">Web Development Intern</h3>
+            <div class="timeline-company">CodSoft (Remote)</div>
+            <p class="timeline-body">
+              Designed and implemented interactive web development projects focusing on responsive design, modern UI components, and cross-browser stability. Delivered modular user-centric interfaces including landing pages, booking portals, and utility tools.
+            </p>
+          </div>
+
+          <!-- Education 1 -->
+          <div class="timeline-node edu">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023 — 2027 (Expected)</div>
+            <h3 class="timeline-role">B.Tech in Computer Science &amp; Engineering</h3>
+            <div class="timeline-company">Galgotias University • Greater Noida, India</div>
+            <p class="timeline-body">
+              Core academic curriculum includes Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management Systems, Computer Networks, and Operating Systems.
+            </p>
+          </div>
+
+          <!-- Certifications -->
+          <div class="timeline-node edu">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2025</div>
+            <h3 class="timeline-role">Certifications &amp; Bootcamps</h3>
+            <div class="timeline-company">EduSkills &amp; Full Stack Training</div>
+            <p class="timeline-body">
+              Completed intensive Virtual Internships in Web Full Stack Development &amp; Networking, as well as hands-on development bootcamps with deployed mini-apps.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CONTACT SECTION ("Lighthouse Telegraph") -->
+    <section id="contact" class="section-container">
+      <span class="section-tagline">✦ Get in Touch</span>
+      <h2 class="section-title">Let's build something<br>wonderful together.</h2>
+
+      <div class="contact-centered-wrapper">
+        <!-- Contact Information -->
+        <div class="contact-info-card contact-card-full">
+          <h3>Say hello!</h3>
+          <p>
+            Whether you have a full-time role or internship to discuss, a question about my projects, or just want to chat about web technology, my inbox is always open.
+          </p>
+
+          <div class="contact-details-grid">
+            <a href="mailto:mishikamendiratta@gmail.com" class="contact-link-row">
+              <div class="contact-icon-bubble">✉️</div>
+              <div class="contact-text-group">
+                <div class="contact-label">Direct Email</div>
+                <div class="contact-val">mishikamendiratta@gmail.com</div>
+              </div>
+            </a>
+
+            <div class="contact-link-row">
+              <div class="contact-icon-bubble">📍</div>
+              <div class="contact-text-group">
+                <div class="contact-label">Location</div>
+                <div class="contact-val">Greater Noida, India • Open to Remote</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-actions-footer">
+            <a href="mailto:mishikamendiratta@gmail.com" class="btn-primary">
+              Send an Email <span>✉</span>
+            </a>
+            <div class="social-pills">
+              <a href="https://github.com/mishika2004" target="_blank" rel="noopener noreferrer" class="social-pill">GitHub ↗</a>
+              <a href="https://www.linkedin.com/in/mishika-mendiratta" target="_blank" rel="noopener noreferrer" class="social-pill">LinkedIn ↗</a>
+              <a href="https://leetcode.com/u/mishika_/" target="_blank" rel="noopener noreferrer" class="social-pill">LeetCode ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <!-- Smiling Cloud Mascot -->
+    <div class="footer-cloud-mascot">
+      <svg viewBox="0 0 100 60" width="100%" height="100%">
+        <path d="M20 45 Q5 45 5 32 Q5 20 20 18 Q25 6 45 6 Q62 6 68 16 Q80 10 90 20 Q98 25 98 36 Q98 45 85 45 Z" fill="#ffffff" />
+        <circle cx="42" cy="28" r="2.5" fill="#1b3b30" />
+        <circle cx="58" cy="28" r="2.5" fill="#1b3b30" />
+        <circle cx="36" cy="32" r="3.5" fill="#fbaab5" opacity="0.8" />
+        <circle cx="64" cy="32" r="3.5" fill="#fbaab5" opacity="0.8" />
+        <path d="M48 32 Q50 36 52 32" stroke="#1b3b30" stroke-width="2" fill="none" stroke-linecap="round" />
+      </svg>
+    </div>
+    <div class="footer-note">Thanks for sailing by! ⛵</div>
+    <div class="footer-copy">
+      © 2026 Mishika Mendiratta • Designed in the Seán Halpin aesthetic.
+    </div>
+  </footer>
+
+  <!-- JavaScript Engine -->
+  <script src="js/scroll-engine.js"></script>
+</body>
+</html>

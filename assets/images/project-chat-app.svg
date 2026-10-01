@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="100%" height="100%">
+  <!-- Window Container -->
+  <rect width="800" height="520" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Window Header -->
+  <rect width="800" height="42" rx="10" fill="#1e2430"/>
+  <rect y="32" width="800" height="10" fill="#1e2430"/>
+  <circle cx="24" cy="21" r="5" fill="#f87171"/>
+  <circle cx="40" cy="21" r="5" fill="#fbbf24"/>
+  <circle cx="56" cy="21" r="5" fill="#34d399"/>
+  <rect x="90" y="10" width="620" height="22" rx="4" fill="#2d3748"/>
+  <text x="105" y="25" fill="#a0aec0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">https://pulsechat-app.io/messages</text>
+
+  <!-- Left Sidebar (Dark Charcoal) -->
+  <rect x="0" y="42" width="230" height="478" fill="#1a202c"/>
+  <line x1="230" y1="42" x2="230" y2="520" stroke="#2d3748" stroke-width="1"/>
+  
+  <text x="24" y="76" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="800">Chats</text>
+  <rect x="20" y="94" width="190" height="30" rx="6" fill="#2d3748"/>
+  <text x="32" y="113" fill="#a0aec0" font-family="sans-serif" font-size="11">Search contacts...</text>
+
+  <!-- Chat Item 1 (Active) -->
+  <rect x="12" y="138" width="206" height="52" rx="8" fill="#2d3748"/>
+  <circle cx="38" cy="164" r="15" fill="#4f46e5"/>
+  <text x="38" y="169" text-anchor="middle" fill="#ffffff" font-weight="700" font-size="11">JD</text>
+  <circle cx="49" cy="175" r="4.5" fill="#22c55e" stroke="#2d3748" stroke-width="1.5"/>
+  <text x="62" y="158" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="600">Dev Team Room</text>
+  <text x="62" y="174" fill="#a0aec0" font-family="sans-serif" font-size="10">typing a response...</text>
+
+  <!-- Chat Item 2 -->
+  <circle cx="38" cy="216" r="15" fill="#059669"/>
+  <text x="38" y="221" text-anchor="middle" fill="#ffffff" font-weight="700" font-size="11">AL</text>
+  <text x="62" y="210" fill="#e2e8f0" font-family="sans-serif" font-size="12" font-weight="600">Alice Liu</text>
+  <text x="62" y="226" fill="#718096" font-family="sans-serif" font-size="10">Thanks for merging!</text>
+
+  <!-- Chat Item 3 -->
+  <circle cx="38" cy="268" r="15" fill="#d97706"/>
+  <text x="38" y="273" text-anchor="middle" fill="#ffffff" font-weight="700" font-size="11">MK</text>
+  <text x="62" y="262" fill="#e2e8f0" font-family="sans-serif" font-size="12" font-weight="600">Marketing Sync</text>
+  <text x="62" y="278" fill="#718096" font-family="sans-serif" font-size="10">Standup link attached</text>
+
+  <!-- Main Chat Conversation Area (Clean White / Light Blue bubbles) -->
+  <rect x="230" y="42" width="570" height="478" fill="#f8fafc"/>
+  
+  <!-- Active Header -->
+  <rect x="230" y="42" width="570" height="54" fill="#ffffff"/>
+  <line x1="230" y1="96" x2="800" y2="96" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="260" cy="69" r="15" fill="#4f46e5"/>
+  <text x="260" y="74" text-anchor="middle" fill="#ffffff" font-weight="700" font-size="11">DT</text>
+  <text x="286" y="66" fill="#1e293b" font-family="sans-serif" font-size="14" font-weight="700">Dev Team Room</text>
+  <text x="286" y="80" fill="#22c55e" font-family="sans-serif" font-size="11">● 8 members online</text>
+
+  <!-- Messages -->
+  <!-- Message 1 Incoming -->
+  <g transform="translate(260, 125)">
+    <circle cx="16" cy="16" r="14" fill="#e2e8f0"/>
+    <text x="16" y="20" text-anchor="middle" fill="#475569" font-size="10" font-weight="700">SR</text>
+    <rect x="40" y="0" width="310" height="50" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="54" y="22" fill="#1e293b" font-family="sans-serif" font-size="12">Hey team, WebSockets latency is down to</text>
+    <text x="54" y="38" fill="#1e293b" font-family="sans-serif" font-size="12">under 18ms across all active rooms!</text>
+  </g>
+
+  <!-- Message 2 Outgoing (Blue Pill) -->
+  <g transform="translate(435, 195)">
+    <rect width="320" height="50" rx="12" fill="#3b82f6"/>
+    <text x="16" y="22" fill="#ffffff" font-family="sans-serif" font-size="12">Super smooth! The instant typing state</text>
+    <text x="16" y="38" fill="#ffffff" font-family="sans-serif" font-size="12">and presence sync are working flawlessly.</text>
+  </g>
+
+  <!-- Message 3 Incoming -->
+  <g transform="translate(260, 265)">
+    <circle cx="16" cy="16" r="14" fill="#e2e8f0"/>
+    <text x="16" y="20" text-anchor="middle" fill="#475569" font-size="10" font-weight="700">SR</text>
+    <rect x="40" y="0" width="280" height="46" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="54" y="22" fill="#1e293b" font-family="sans-serif" font-size="12">Deploying the MongoDB Atlas cluster</text>
+    <text x="54" y="38" fill="#1e293b" font-family="sans-serif" font-size="12">replica set to production now. 🚀</text>
+  </g>
+
+  <!-- Input Bar with Blue Send Button -->
+  <g transform="translate(255, 440)">
+    <rect width="520" height="48" rx="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="24" y="28" fill="#94a3b8" font-family="sans-serif" font-size="12">Type your message here...</text>
+    <circle cx="490" cy="24" r="17" fill="#3b82f6"/>
+    <path d="M485 24 L496 19 L491 29 Z" fill="#ffffff"/>
+  </g>
+</svg>
